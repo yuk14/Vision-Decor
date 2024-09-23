@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart Pure Javascript</title>
+<script type="text/javascript" src="js.js"></script> 
+</head>
+<body>
+<br>
+<p id="demo"><table border="1|1"><tbody><tr><td>Product ID</td><td>Product Description</td><td>Quantity</td><td>Price</td><td>Action</td></tr><tr><td>GPS</td><td>Gps tracker</td><td>10</td><td>5</td><td><button type="submit" onclick='deleteProduct("GPS", this);'>Delete Item</button> &nbsp; <button type="submit" onclick='addCart("GPS", this);'>Add to Cart</button></td></tr><tr><td>Alarm</td><td>Alarm door</td><td>1</td><td>10</td><td><button type="submit" onclick='deleteProduct("Alarm", this);'>Delete Item</button> &nbsp; <button type="submit" onclick='addCart("Alarm", this);'>Add to Cart</button></td></tr><tr><td>Car</td><td>Toyota</td><td>1</td><td>200</td><td><button type="submit" onclick='deleteProduct("Car", this);'>Delete Item</button> &nbsp; <button type="submit" onclick='addCart("Car", this);'>Add to Cart</button></td></tr></tbody></table></p> <br>
+<h2> Shopping Cart </h2>
+<p id="demo2"></p>
+<h2>Grand Total:</h2>
+<p id="demo3"></p>var products = [];
+</body>
+</html>

@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Decor</title>
+        <style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 5.0s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background-color:white;
+    position: fixed;
+    color: #fff;
+    padding: 0 20px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a.logo {
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 60px;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+nav ul li {
+    line-height: 60px;
+    margin: 0 5px;
+}
+
+nav ul a {
+    color: rgb(16, 12, 12);
+    font-size: 18px;
+    padding: 5px 13px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: .4s;
+}
+
+.active,nav ul a:hover {
+    background: #6c496c;
+    padding: 10px;
+    color: rgb(248, 242, 242);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px;
+    font-size: 40px;
+}
+
+section#home {
+  
+    color: #f2f2f3;
+}
+
+
+.checkbtn {
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.credit a {
+    text-decoration: none;
+    color: crimson;
+    font-weight: 800;
+}
+
+.credit {
+    text-align: center;
+    font-family: Verdana,Geneva,Tahoma,sans-serif;
+    color: #FFF;
+    font-size: 15px;
+    padding-top: 500px;
+    position: fixed;
+}
+
+
+div.container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.btn{
+  background:  #314867;
+  color: white;
+  border: 2px solid white;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 25px 80px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin: 15px 30px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+
+button.btn-1:hover{
+  background-color: white;
+  color: black;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+button.btn-2{
+  overflow: hidden;
+  position: relative;
+}
+
+button.btn-2:hover{
+  color: black;
+}
+
+
+button.btn-2:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+
+button.btn-2:hover:after,
+button.btn-2:active:after {
+  height: 100%;
+}
+* {
+	box-sizing: border-box;
+}
+h3{
+      text-align: center;
+      font-size: 30px;
+      margin: 0;
+      padding-top: 10px;
+      }
+      a{
+      text-decoration: none;
+      }
+      .gallery{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0;
+      }
+      .content{
+      width: 24%;
+      margin: 15px;
+      box-sizing: border-box;
+      float: left;
+      text-align: center;
+      border-radius:10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding-top: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: .4s;
+      }
+      .content:hover{
+      box-shadow: 0 0 11px rgba(33,33,33,.2);
+      transform: translate(0px, -8px);
+      transition: .6s;
+      }
+      img1{
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+      }
+      p{
+      text-align: center;
+      color: #b2bec3;
+      padding: 0 8px;
+      }
+      h6{
+      font-size: 26px;
+      text-align: center;
+      color: #222f3e;
+      margin: 0;
+      }
+      ul{
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      }
+      li{
+      padding: 5px;
+      }
+      .fa{
+      color: #ff9f43;
+      font-size: 26px;
+      transition: .4s;
+      }
+      .fa:hover{
+      transform: scale(1.3);
+      transition: .6s;
+      }
+      button{
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      width: 100%;
+      padding: 15px;
+      border:0px;
+      outline: none;
+      cursor: pointer;
+      margin-top: 5px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      }
+      .buy-1{
+      background-color: #2183a2;
+      }
+      .buy-2{
+      background-color: #3b3e6e;
+      }
+      .buy-3{
+      background-color: #0b0b0b;
+      }
+      @media(max-width: 1000px){
+      .content{
+      width: 46%;
+      }
+      }
+      @media(max-width: 750px){
+      .content{
+      width: 100%;
+      }
+      }
+      .all-browsers {
+  margin: 0;
+  padding: 5px;
+  background-color: lightgray;
+}
+
+.all-browsers > h1, .browser {
+  margin: 10px;
+  padding: 5px;
+}
+
+.browser {
+  background: white;
+}
+
+.browser > h2, p {
+  margin: 4px;
+  font-size: 90%;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(157, 155, 155);
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fa-facebook {
+  background: rgb(157, 155, 155);
+  color: white;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+  background: rgb(157, 155, 155);
+  color: white;
+}
+
+.fa-instagram {
+  background:rgb(157, 155, 155);
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <img src="logo.png">
+    <ul id="navigation">
+      <li><a href="#section-2" class="btn">Home</a>
+      </li>
+      <li><a href="#section-1" class="btn">About</a></li>
+      <li><a href="#section-1" class="btn">Contact</a></li>
+      <li><a href="cart11.html" class="btn">Cart</a></li>
+      <li><a href="login3.html" class="btn active">Login</a></li>
+    </ul>
+  </nav>
+</header>
+<br><br><br><br><br><hr>
+<script type="text/javascript" src="script.js">
+  var header = document.getElementById("navigation");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+
+</script>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1/4</div>
+  <img src="front1.jpg" style="width:100%;height:800px;">
+  <div class="text">The joy of Best LIving.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2/4</div>
+  <img src="front 2.jpg" style="width:100% ;height:800px; ">
+  <div class="text">Giving your Home a new Style. </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3/4</div>
+  <img src="front 3.jpg" style="width:100% ;height:800px;">
+  <div class="text">Good Design for Good Moments.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4/4</div>
+  <img src="front 4.jpg" style="width:100% ;height:800px;">
+  <div class="text">Desire meets a new Design</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div><br><br><br>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+    </style>
+</head>
+<body>
+  <h1 style="text-align:center" id="section-2";>SHOP CATEGORIES</h1><br>
+  <div class="container">
+  
+    <button class="btn btn-1">MODULAR KITCHEN</button>
+    <button class="btn btn-1">LIVING ROOM</button>
+    <button class="btn btn-1">BEDROOM</button></div><br><div class="container">
+    <button class="btn btn-1">BATHROOM</button>
+    <button class="btn btn-1">BALCONY</button>
+    <button class="btn btn-1">HOME OFFICE</button>
+  </div><BR><BR> <br>
+    
+  <h1 style="text-align:center">MODULAR KITCHEN</h1><br> 
+  <div class="gallery">
+    <div class="content">
+      <img class="img1" src="k10.jpg">
+      <h3>	
+        U-Shape Kitchen </h3>
+      <p>dimensions: 3994*3272mm Primary Material: Ply & Laminate Finish: Hi-Gloss Laminate Style: Vintage Dispatch: 45 Working Days</p>
+      <h6>$6767.45</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+     <a href="cart11.html"> <button class="card__btn add-to-cart buy-1" data-id="6">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="k20.jpg">
+      <h3>L-Shaped Kitchen</h3>
+      <p>kitchen made of pre-laminated BWR plyboards with various kinds of base and wall units including open units, corner units. </p>
+      <h6 class="card__price">$4229.60</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html"> <button class="card__btn add-to-cart buy-1" data-id="6">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="k30.jpg">
+      <h3>Island Kitchen</h3>
+      <p>Acrylic finish modular kitchen, Luxurious kitchen, Island kitchen, hi gloss finish kitchen, blue and white kitchen</p>
+      <h6>$9592.80</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html"> <button class="buy-3">Buy Now</button></a>
+    </div>
+  </div>
+  <h1 style="text-align:center">LIVING ROOM</h1><br>
+  <div class="gallery">
+    <div class="content">
+      <img class="img1" src="l10.jpg">
+      <h3>	
+        Minimalist Living Room</h3>
+      <p>A living room design, with minimalist interior design elements. This budget-friendly space is easy to maintain. </p>
+      <h6>$906.350</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-1">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="l20.jpg">
+      <h3>Contemporary Living Room </h3>
+      <p> The room is styled with two long sofas placed in front of each other and both sport upholstered bodies and unique finishes. </p>
+      <h6>$1093.63</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html"> <button class="buy-2">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="l30.jpg">
+      <h3>Traditional Living Room</h3>
+      <p>A traditional living room design with ambient interior lighting. The natural light coming in brightens up this space.</p>
+      <h6>$831.40</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html"> <button class="buy-3">Buy Now</button></a>
+    </div>
+  </div>
+
+
+  <h1 style="text-align:center">BEDROOM</h1><br>
+  <div class="gallery">
+    <div class="content">
+      <img class="img1" src="be10.jpg">
+      <h3>	
+        Classic Master Bedroom</h3>
+      <p>The stunning brick patterned wallpaper on the accent wall makes this master bedroom design a classic yet timeless one.  </p>
+      <h6>$970.40</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-1">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="be20.jpg">
+      <h3>Spacious Master Bedroom </h3>
+      <p>This master bedroom design is anything but ordinary with its accent wall featuring two patterns, that of a floral wallpaper and fluted panels. </p>
+      <h6>$1450.15</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-2">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="be30.jpg">
+      <h3>Scandinavian Master Bedroom</h3>
+      <p>The subtle colour palette gives a cosy vibe. The overall lighting is warm and elegant. A study table is indulged in this space.</p>
+      <h6>$2039.90</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-3">Buy Now</button></a>
+    </div>
+  </div>
+
+  <h1 style="text-align:center">  BATHROOM</h1><br>
+  <div class="gallery">
+    <div class="content">
+      <img class="img1" src="b10.jpg">
+      <h3>	
+        Compact Bathroom</h3>
+      <p>
+        Dimension: 6 X 6 feet,Style: Contemporary,
+        Compact bathroom with a contemporary style,
+        Light grey wall tiles with multicolor tiles on ledge wall.  </p>
+      <h6>$785.50</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-1">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="b20.jpg">
+      <h3>Modern Bathroom </h3>
+      <p>Dimension: 9 X 9 feet,
+       
+        Spacious modern bathroom design with premium style.
+        Mix of earthy brown and grey tiles for walls and floor. </p>
+      <h6>$1087.60</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-2">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="b30.jpg">
+      <h3>Contemporary Bathroom</h3>
+      <p>Dimension: 8 X 6 feet,
+      Spacious with textured matt finish tiles.
+        Ample storage space along with counter top washbasin.
+       </p>
+      <h6>$613.90</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html"> <button class="buy-3">Buy Now</button></a>
+    </div>
+  </div>
+
+  <h1 style="text-align:center">BALCONY</h1><br>
+  <div class="gallery">
+    <div class="content">
+      <img class="img1" src="y10.jpg">
+      <h3>	
+        Tropical Balcony</h3>
+      <p>
+        This perfect dream balcony design in a tropical setting is ideal for your home. The textured concrete wall with a circular mirror and sturdy wooden slabs create the right vibe.  </p>
+      <h6>$547.40</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-1">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="y20.jpg">
+      <h3>Industrial Balcony </h3>
+      <p>This balcony design gives an industrial vibe to your balcony. The use of exposed brick cladding adds a rustic feel to the space. </p> 
+      <h6>$459.22</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-2">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="y30.jpg">
+      <h3>Bohemian Balcony </h3>
+      <p>This balcony design follows a Bohemian style. The dark wooden false ceiling and flooring complement the dense flora on the wall. 
+       </p>
+      <h6>$310.60</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-3">Buy Now</button></a>
+    </div>
+  </div>
+
+  <h1 style="text-align:center">HOME OFFICE</h1><br>
+  <div class="gallery">
+    <div class="content">
+      <img class="img1" src="h10.jpg">
+      <h3>	
+        Scandinavian Home Office</h3>
+      <p>
+        The L-shaped desk has drawers and offers ample space. It has open-wall shelves.</p>
+      <h6>$1027.20</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-1">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="h20.jpg">
+      <h3>Eclectic Home Office</h3>
+      <p>The warm strip lighting under the wall shelves highlights and accentuates the look of the space.</p> 
+      <h6>$1452.60</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">  <button class="buy-2">Buy Now</button></a>
+    </div>
+    <div class="content">
+      <img class="img1" src="h30.jpg">
+      <h3>Classic Home Office </h3>
+      <p>The open shelves lend ample space for displaying accessories and books. A functional design with elegance is at offering.
+       </p>
+      <h6>$911.18</h6>
+      <ul>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+      </ul>
+      <a href="cart11.html">   <button class="buy-3">Buy Now</button></a>
+    </div>
+  </div>
+  <script  src="./js/script.js"></script>
+  <article class="Home Decor">
+  
+    <article class="browser">
+      <h2></h2>
+      <p></p>
+    </article>
+    <article class="browser">
+      <h2></h2>
+      <p></p>
+    </article>
+    <article class="browser">
+      <h2></h2>
+      <p></p>
+    </article>
+    <article class="browser">
+      <h2></h2>
+      <p></p>
+    </article>
+    <article class="browser">
+      <h2></h2>
+      <p></p>
+    </article>
+    </article>
+  
+  
+  <footer id="section-1";>
+      <div class="row">
+          <div class="column" style="background-color:rgb(157, 155, 155);">
+            <h2>ABOUT US</h2>
+            <p>Home decoration items play an important role in transforming a house into an attractive home! An attractive home immediately sets the mood to unwind, relax and spend time with your loved ones.
+          
+              Home decor products also play a crucial role in setting up the mood and the environment of the space, which is why it is important to set up your interior space in line with what suits your character and personality.
+              
+              Before you begin your journey to buy home decor products online from our website, we highly recommend that you first understand the theme of your home. A clear understanding of the same enables you to make better choices that suit the needs of your family.
+              
+              All our products are painstakingly manufactured with top-quality raw materials and designed by the finest artisans you will find and made durable to last you a lifetime, makin  us one of the best home decor websites. We hope, every home decor item you purchase from us, finds a fitting place in your dream home!</p>
+        </p>
+          </div>
+          <div class="column" style="background-color:rgb(157, 155, 155);">
+            <h2>CONTACT US</h2>
+            <p>&#9742;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;080-43435678<br><br>
+            &#9993;&nbsp;&nbsp;&nbsp;
+            <a href="Vdecor@gmail.com">Vdecor@gmail.com</a><br><br>
+             &#128205;&nbsp;&nbsp;George Washington, <br>Tanner Street, Lakefield, NY 12039</p>
+          </div>
+          <div class="column" style="background-color:rgb(157, 155, 155);">
+            <h2>SERVICES</h2>
+            <p>
+              Help Placing Your Order<br><br>
+              Free Room Design<br><br>
+              Free Closet Design<br><br>
+              Lowest Price Promise<br><br>
+              Free Shipping*<br><br>
+              Protection Plans<br><br>  
+              Rewards Program</p>
+          </div>
+          
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+        &nbsp; Terms and conditions apply.<br>
+       </p></footer>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     
+  </footer>
+</body>
+</html>

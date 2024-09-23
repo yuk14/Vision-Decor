@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CodeHim">
+    <title>Javascript Online Shopping Cart Example</title>
+    
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+  
+  </head>
+  <body>
+ 
+  
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+   <header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+      <h1 class="header__title">
+        
+        <span class="header__subtitle"><IMG SRC="logo.png"></span>
+      </h1>
+    </div>
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> Your Cart</button>
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a href="bill.html"  class="cart-btn">Checkout</a> 
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="arrow"><svg width="24" height="24" viewBox="0 0 24 24">
+  <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+</svg></div>
+</header>
+<main class="container page-content">
+    <div class="grid" id="grid">
+    <div class="card">
+      <img src="k10.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">U-SHAPED KITCHEN</h4>
+       
+        <p class="card__price">$6761.45</p>
+        <button class="card__btn add-to-cart" data-id="6">Add to Cart</button>
+      </div>
+    </div>&nbsp;
+    <!--.card-->
+    <div class="card">
+      <img src="k20.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">L-SHAPED KITCHEN</h4>
+        
+        <p class="card__price">$4229.60</p>
+        <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+      </div>
+    </div><br>
+    <!--.card-->
+    <div class="card">
+      <img src="k30.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">ISLAND KITCHEN</h4>
+       
+        <p class="card__price">$9592.80</p>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div><br>
+    <!--.card-->
+    <div class="card">
+      <img src="l10.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">MINIMALIST LIVING ROOM</h4>
+        
+        <p class="card__price">$906.35</p>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div><br>
+    <!--.card-->
+    <div class="card">
+      <img src="l20.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">CONTEMPORARY LIVING ROOM</h4>
+      
+        <p class="card__price">$1093.63</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div><br>
+    <!--.card-->
+    <div class="card">
+      <img src="l30.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">TRADITIONAL LIVING ROOM</h4>
+      
+        <p class="card__price">$831.40</p>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div><br>
+    <!--.card-->
+    <div class="card">
+      <img src="be10.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">CLASSIC MASTER BEDROOM</h4>
+      
+        <p class="card__price">$970.40</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div><br>
+    <!--.card-->
+    <div class="card">
+        <img src="be20.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">SPACIOUS MASTER BEDROOM</h4>
+        
+          <p class="card__price">$1450.15</p>
+          <button class="card__btn add-to-cart" data-id="13">Add to Cart</button>
+        </div>
+      </div><br>
+      <!--.card-->
+      <div class="card">
+        <img src="be30.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">SCANDINAVIAN MASTER BEDROOM</h4>
+        
+          <p class="card__price">$2039.90</p>
+          <button class="card__btn add-to-cart" data-id="14">Add to Cart</button>
+        </div>
+      </div><br>
+      <!--.card-->
+      <div class="card">
+        <img src="b10.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">COMPACT BATHROOM</h4>
+        
+          <p class="card__price">$785.50</p>
+          <button class="card__btn add-to-cart" data-id="15">Add to Cart</button>
+        </div>
+      </div><br>
+      <!--.card-->
+      <div class="card">
+        <img src="b20.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">MODERN BATHROOM</h4>
+        
+          <p class="card__price">$1087.60</p>
+          <button class="card__btn add-to-cart" data-id="16">Add to Cart</button>
+        </div>
+      </div><br>
+      <!--.card-->
+      <div class="card">
+        <img src="b30.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">CONTEMPORARY BATHROOM</h4>
+        
+          <p class="card__price">$613.90</p>
+          <button class="card__btn add-to-cart" data-id="17">Add to Cart</button>
+        </div>
+      </div><br>
+      <!--.card-->
+      <div class="card">
+        <img src="y10.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">TROPICAL BALCONY</h4>
+        
+          <p class="card__price">$547.40</p>
+          <button class="card__btn add-to-cart" data-id="18">Add to Cart</button>
+        </div>
+      </div><br>
+      <!--.card-->
+      <div class="card">
+        <img src="y20.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">INDUSTRIAL BALCONY</h4>
+        
+          <p class="card__price">$459.22</p>
+          <button class="card__btn add-to-cart" data-id="19">Add to Cart</button>
+        </div>
+      </div><br>
+      <!--.card-->
+      <div class="card">
+        <img src="y30.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">BOHEMIAN BALCONY</h4>
+        
+          <p class="card__price">$310.60</p>
+          <button class="card__btn add-to-cart" data-id="20">Add to Cart</button>
+        </div>
+      </div><br>
+      <!--.card-->
+      <div class="card">
+      <img src="h10.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">SCANDINAVIAN HOME OFFICE</h4>
+      
+        <p class="card__price">$1027.20</p>
+        <button class="card__btn add-to-cart" data-id="21">Add to Cart</button>
+      </div>
+    </div><br>
+    <!--.card-->
+    <div class="card">
+        <img src="h20.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">ECLECTIC HOME OFFICE</h4>
+        
+          <p class="card__price">$1452.60</p>
+          <button class="card__btn add-to-cart" data-id="22">Add to Cart</button>
+        </div>
+      </div><br>
+      <!--.card-->
+      <div class="card">
+        <img src="h30.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">CLASSIC HOME OFFICE</h4>
+        
+          <p class="card__price">$911.18</p>
+          <button class="card__btn add-to-cart" data-id="23">Add to Cart</button>
+        </div>
+      </div><br>
+      
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__links">
+    <ul class="footer__list">
+     
+    </ul>
+  </div>
+  <div class="credits">
+    <p class="credits__small-text">&copy;VISION DECOR</p>
+  </div>  
+  </div>
+</footer>  
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+ 
+      
+ 
+  <script  src="./js/script.js"></script>
+  </body>
+</html>
